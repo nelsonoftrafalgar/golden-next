@@ -1,0 +1,86 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin fadein {
+  animation: fadein 1s;
+}
+
+@mixin underline-on-hover {
+  outline: none;
+
+  &:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    background-color: $gold;
+    width: 0;
+    height: 1px;
+    transition: $hover-transition;
+  }
+
+  &:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    background-color: $gold;
+    width: 0;
+    height: 1px;
+    transition: $hover-transition;
+  }
+
+  &:hover {
+    opacity: 1;
+
+    @include breakpoint('desktop') {
+      opacity: $hover-opacity;
+      cursor: pointer;
+    }
+  }
+
+  &:hover:after,
+  &:hover:before {
+    width: 0;
+
+    @include breakpoint('desktop') {
+      width: 100%;
+    }
+  }
+}
+
+@mixin name-txt {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+
+  @include breakpoint('desktop') {
+    font-size: 2em;
+  }
+}
+
+@mixin spec-txt {
+  list-style-type: none;
+  font-size: 1em;
+  padding: 0.5em;
+
+  @include breakpoint('desktop') {
+    font-size: 1.2em;
+  }
+}
+
+@mixin breakpoint($width) {
+  @if ($width == 'desktop') {
+    @media (min-width: $breakpoint-desktop) {
+      @content;
+    }
+
+    @media all and (orientation: landscape) {
+      @content;
+    }
+  }
+}

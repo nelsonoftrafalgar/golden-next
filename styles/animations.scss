@@ -1,0 +1,17 @@
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes logo-animation {
+  0% {
+    stroke-dashoffset: 780;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
