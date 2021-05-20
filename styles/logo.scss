@@ -1,0 +1,27 @@
+.logo-mobile {
+  user-select: none;
+  height: 60%;
+
+  path {
+    stroke-dasharray: 780;
+    animation: logo-animation 4s;
+  }
+
+  @include breakpoint('desktop') {
+    display: none;
+  }
+}
+
+.logo-desktop {
+  display: none;
+
+  g path {
+    stroke-dasharray: 780;
+    animation: logo-animation 4s;
+  }
+
+  @include breakpoint('desktop') {
+    display: block;
+    width: 80%;
+  }
+}
