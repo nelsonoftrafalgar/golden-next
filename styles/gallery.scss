@@ -1,0 +1,39 @@
+.gallery-section {
+  background-color: $bg-color;
+  color: $gold;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+  justify-content: space-between;
+  flex-direction: row;
+
+  @include breakpoint('desktop') {
+    width: calc(100% - 20vh);
+  }
+}
+
+.gallery-image {
+  height: 70vh;
+  width: 80%;
+
+  @include flex-center;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+.gallery-btn {
+  width: 5%;
+  height: auto;
+  background-color: $bg-color;
+
+  &:hover {
+    opacity: $hover-opacity;
+    transition: $hover-transition;
+    cursor: pointer;
+  }
+}

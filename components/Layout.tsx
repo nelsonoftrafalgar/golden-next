@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
       {children}
       <div className="nav-section gallery">
         <div className="btn-v">
-          <Link href="/">
+          <Link href="/gallery">
             <a className="nav-link right">Gallery</a>
           </Link>
         </div>
