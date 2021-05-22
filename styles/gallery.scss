@@ -18,6 +18,7 @@
   width: 80%;
 
   @include flex-center;
+  @include fade-in;
 
   img {
     height: 100%;

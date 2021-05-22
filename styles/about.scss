@@ -1,0 +1,35 @@
+.about-section {
+  background-color: $bg-color;
+  color: $gold;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+  flex-direction: column;
+  overflow-y: scroll;
+  padding: 20px;
+
+  @include breakpoint('desktop') {
+    width: calc(100% - 20vh);
+  }
+}
+
+.about-content {
+  p {
+    font-size: 1.2em;
+    text-align: justify;
+    display: inline-block;
+    animation: fadein 1s;
+    text-indent: 3%;
+
+    @include breakpoint('desktop') {
+      font-size: 0.95em;
+    }
+  }
+}
+
+.about-image {
+  min-height: 55%;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}

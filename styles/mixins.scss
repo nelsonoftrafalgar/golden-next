@@ -4,8 +4,8 @@
   align-items: center;
 }
 
-@mixin fadein {
-  animation: fadein 1s;
+@mixin fade-in {
+  animation: fade-in 1s;
 }
 
 @mixin underline-on-hover {

@@ -28,11 +28,11 @@ const Gallery: FC<IProps> = ({ images }) => {
 export default Gallery
 
 export const getStaticProps = async () => {
-  const response = await axios.get(`${process.env.API_URL}/galleries`)
+  const response = await axios.get(`${process.env.API_URL}/gallery`)
 
   return {
     props: {
-      images: response.data[0].images
+      images: response.data.images
     }
   }
 }
