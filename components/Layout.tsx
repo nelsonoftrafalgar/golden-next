@@ -34,7 +34,7 @@ const Layout = ({ children }) => {
       </div>
       <div className="nav-section contact">
         <div className="btn-h">
-          <Link href="/">
+          <Link href="/contact">
             <a className="nav-link">Contact</a>
           </Link>
         </div>
