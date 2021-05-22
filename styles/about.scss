@@ -9,6 +9,7 @@
   overflow-y: scroll;
   padding: 20px;
 
+  @include fade-in;
   @include breakpoint('desktop') {
     width: calc(100% - 20vh);
   }
