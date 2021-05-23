@@ -1,0 +1,122 @@
+.portfolio-section {
+  background-color: $bg-color;
+  color: $gold;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+
+  @include fade-in;
+  @include breakpoint('desktop') {
+    width: calc(100% - 20vh);
+  }
+}
+
+.viols-menu {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: $gold;
+  width: 50%;
+  height: 100%;
+}
+
+.viols-menu-btn {
+  margin-top: 5%;
+  position: relative;
+  font-size: 2.1em;
+  font-family: $basic-font;
+  color: $gold;
+  background: $bg-color;
+
+  @include underline-on-hover;
+}
+
+.viols-menu-image {
+  width: 100%;
+  height: 90%;
+
+  @include flex-center;
+  @include fade-in;
+
+  img {
+    height: 70%;
+    width: 70%;
+  }
+}
+
+.viols-menu-list {
+  list-style-type: none;
+  margin-top: 10%;
+
+  @include fade-in;
+
+  .viols-menu-list-item {
+    font-size: 2.1em;
+    font-family: $basic-font;
+    margin-bottom: 30%;
+    text-align: center;
+
+    @include breakpoint('desktop') {
+      margin-bottom: 20%;
+    }
+
+    a {
+      position: relative;
+      text-decoration: none;
+      color: $gold;
+
+      @include underline-on-hover;
+    }
+  }
+}
+
+.instrument-wrapper {
+  width: 100%;
+  display: flex;
+  height: 80vh;
+}
+
+.list-image {
+  width: 60%;
+  height: 100%;
+  padding: 0 15px;
+
+  @include breakpoint('desktop') {
+    padding: 0;
+  }
+
+  @include flex-center;
+  @include fade-in;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+.viol-spec {
+  width: 40%;
+  height: 100%;
+  @include flex-center;
+  flex-direction: column;
+  padding-right: 15px;
+
+  @include breakpoint('desktop') {
+    padding-left: 15px;
+    padding-right: 0;
+  }
+
+  li {
+    @include spec-txt;
+    @include fade-in;
+  }
+}
+
+.title-default {
+  @include name-txt;
+}

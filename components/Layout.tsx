@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
       </div>
       <div className="nav-section portfolio">
         <div className="btn-v">
-          <Link href="/">
+          <Link href="/portfolio">
             <a className="nav-link left">Portfolio</a>
           </Link>
         </div>
