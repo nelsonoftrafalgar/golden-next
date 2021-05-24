@@ -18,7 +18,7 @@ const Portfolio: FC<IProps> = ({ englishList, frenchList }) => {
   const [isEnglishListVisible, setToggleEnglishList] = useState(false)
   const [isFrenchListVisible, setToggleFrenchList] = useState(false)
   return (
-    <div className="portfolio-section">
+    <section className="portfolio-section">
       <div className="viols-menu">
         <button onClick={() => setToggleFrenchList(!isFrenchListVisible)} className="viols-menu-btn">
           French
@@ -59,7 +59,7 @@ const Portfolio: FC<IProps> = ({ englishList, frenchList }) => {
           </div>
         )}
       </div>
-    </div>
+    </section>
   )
 }
 

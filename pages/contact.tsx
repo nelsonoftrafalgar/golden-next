@@ -8,12 +8,12 @@ interface IProps {
 
 const Contact: FC<IProps> = ({ email, url }) => {
   return (
-    <div className="contact-section">
+    <section className="contact-section">
       <p className="contact-email">{email}</p>
       <a className="contact-url" href={`https://${url}`} target="_blank" rel="noopener noreferrer">
         {url}
       </a>
-    </div>
+    </section>
   )
 }
 
@@ -26,6 +26,7 @@ export const getStaticProps = async () => {
     props: {
       email: response.data.email,
       url: response.data.url
-    }
+    },
+    revalidate: 1
   }
 }

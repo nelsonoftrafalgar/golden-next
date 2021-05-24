@@ -2,9 +2,9 @@ import Logo from '../components/Logo'
 
 const Home = () => {
   return (
-    <div className="home-section">
+    <section className="home-section">
       <Logo />
-    </div>
+    </section>
   )
 }
 

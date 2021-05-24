@@ -11,7 +11,7 @@ interface IProps {
 const Gallery: FC<IProps> = ({ images }) => {
   const { nextClick, prevClick, currentImage } = useGallery(images)
   return (
-    <div className="gallery-section">
+    <section className="gallery-section">
       <button className="gallery-btn" onClick={prevClick}>
         <Image src={'/icons/prev.svg'} width={100} height={100} />
       </button>
@@ -21,7 +21,7 @@ const Gallery: FC<IProps> = ({ images }) => {
       <button className="gallery-btn" onClick={nextClick}>
         <Image src={'/icons/next.svg'} width={100} height={100} />
       </button>
-    </div>
+    </section>
   )
 }
 
@@ -33,6 +33,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       images: response.data.images
-    }
+    },
+    revalidate: 1
   }
 }

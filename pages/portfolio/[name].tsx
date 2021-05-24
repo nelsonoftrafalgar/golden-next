@@ -30,13 +30,13 @@ interface IProps {
 
 const Name: FC<IProps> = ({ item: { image, name, description } }) => {
   return (
-    <div className="portfolio-section">
-      <div className="instrument-wrapper">
-        <div className="list-image">
+    <section className="portfolio-section">
+      <div className="viol-wrapper">
+        <div className="viol-image">
           <img src={`${process.env.apiUrl}${image.url}`} />
         </div>
         <div className="viol-spec">
-          <h2 className="title-default">{name}</h2>
+          <h2 className="viol-name">{name}</h2>
           <ul>
             <li>Front - {description.front}</li>
             <li>Back - {description.back}</li>
@@ -51,7 +51,7 @@ const Name: FC<IProps> = ({ item: { image, name, description } }) => {
           </ul>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

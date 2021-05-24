@@ -11,7 +11,7 @@ interface IProps {
 
 const About: FC<IProps> = ({ content, image }) => {
   return (
-    <div className="about-section">
+    <section className="about-section">
       <div
         className="about-content"
         dangerouslySetInnerHTML={{
@@ -19,7 +19,7 @@ const About: FC<IProps> = ({ content, image }) => {
         }}
       />
       <img className="about-image" src={`${process.env.apiUrl}${image.url}`} alt={image.alternativeText} />
-    </div>
+    </section>
   )
 }
 
@@ -32,6 +32,7 @@ export const getStaticProps = async () => {
     props: {
       content: response.data.content,
       image: response.data.image
-    }
+    },
+    revalidate: 1
   }
 }
