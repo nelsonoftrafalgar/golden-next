@@ -1,0 +1,19 @@
+.error-page {
+  background-color: $bg-color;
+  color: $gold;
+  width: 100%;
+  height: $section-height;
+
+  @include flex-center;
+  @include breakpoint('desktop') {
+    width: calc(100% - 20vh);
+  }
+
+  p {
+    font-size: 3rem;
+
+    @include breakpoint('desktop') {
+      font-size: 5em;
+    }
+  }
+}
