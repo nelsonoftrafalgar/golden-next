@@ -4,7 +4,6 @@
   @include flex-center;
   width: 100%;
   height: $section-height;
-  flex-wrap: wrap;
   flex-direction: column;
 
   @include breakpoint('desktop') {

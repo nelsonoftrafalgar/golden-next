@@ -6,7 +6,6 @@
   width: 100%;
   height: $section-height;
   justify-content: space-between;
-  flex-direction: row;
 
   @include breakpoint('desktop') {
     width: calc(100% - 20vh);
