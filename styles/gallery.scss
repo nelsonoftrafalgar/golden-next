@@ -5,7 +5,7 @@
   align-items: center;
   width: 100%;
   height: $section-height;
-  justify-content: space-between;
+  justify-content: space-around;
 
   @include breakpoint('desktop') {
     width: calc(100% - 20vh);

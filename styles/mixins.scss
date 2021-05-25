@@ -9,8 +9,6 @@
 }
 
 @mixin underline-on-hover {
-  outline: none;
-
   &:after {
     content: '';
     display: inline-block;
