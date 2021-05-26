@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import axios from 'axios'
+import { useRouter } from 'next/router'
 
 export interface IPortfolioItem {
   id: number
@@ -28,7 +29,15 @@ interface IProps {
   item: IPortfolioItem
 }
 
-const Name: FC<IProps> = ({ item: { image, name, description } }) => {
+const Name: FC<IProps> = ({ item }) => {
+  const router = useRouter()
+
+  if (router.isFallback) {
+    return <section className="portfolio-section">Loading ...</section>
+  }
+
+  const { name, image, description } = item
+
   return (
     <section className="portfolio-section">
       <div className="viol-wrapper">
@@ -61,12 +70,18 @@ export const getStaticPaths = async () => {
   const { data } = await axios.get(`${process.env.API_URL}/portfolio`)
   const paths = data.items.map((item: IPortfolioItem) => ({ params: { name: item.slug } }))
 
-  return { paths, fallback: false }
+  return { paths, fallback: true }
 }
 
 export const getStaticProps = async ({ params }) => {
   const { data } = await axios.get(`${process.env.API_URL}/portfolio`)
   const item = data.items.find((item: IPortfolioItem) => item.slug === params.name)
+
+  if (!item) {
+    return {
+      notFound: true
+    }
+  }
 
   return {
     props: { item },
