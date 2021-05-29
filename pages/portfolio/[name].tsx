@@ -42,7 +42,7 @@ const Name: FC<IProps> = ({ item }) => {
     <section className="portfolio-section">
       <div className="viol-wrapper">
         <div className="viol-image">
-          <img src={`${process.env.apiUrl}${image.url}`} />
+          <img src={`${process.env.apiUrl}${image.url}`} alt="instrument image" />
         </div>
         <div className="viol-spec">
           <h2 className="viol-name">{name}</h2>

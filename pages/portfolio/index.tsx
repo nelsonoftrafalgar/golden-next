@@ -35,7 +35,7 @@ const Portfolio: FC<IProps> = ({ englishList, frenchList }) => {
           </ul>
         ) : (
           <div className="viols-menu-image">
-            <img src={'/icons/french-bg.svg'} />
+            <img src={'/icons/french-bg.svg'} alt="french menu image" />
           </div>
         )}
       </div>
@@ -55,7 +55,7 @@ const Portfolio: FC<IProps> = ({ englishList, frenchList }) => {
           </ul>
         ) : (
           <div className="viols-menu-image">
-            <img src={'/icons/english-bg.svg'} />
+            <img src={'/icons/english-bg.svg'} alt="english menu image" />
           </div>
         )}
       </div>
