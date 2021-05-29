@@ -8,10 +8,11 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="en">
         <Head>
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet" />
+          <meta name="description" content="Custom historical instruments from the viola da gamba family" />
         </Head>
         <body>
           <Main />

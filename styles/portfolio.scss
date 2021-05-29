@@ -109,11 +109,15 @@
   }
 
   li {
-    @include spec-txt;
+    list-style-type: none;
+    font-size: 1em;
+    padding: 0.5em;
+
     @include fade-in;
   }
 }
 
 .viol-name {
-  @include name-txt;
+  font-size: 1.5em;
+  margin-bottom: 1em;
 }
