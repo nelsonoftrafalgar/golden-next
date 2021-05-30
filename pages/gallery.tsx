@@ -16,7 +16,7 @@ const Gallery: FC<IProps> = ({ images }) => {
         <Image src={'/icons/prev.svg'} width={100} height={100} alt="prev button" />
       </button>
       <div className="gallery-image">
-        <img src={`${process.env.apiUrl}${currentImage.url}`} alt="gallery image" />
+        <img src={currentImage.url} alt="gallery image" />
       </div>
       <button className="gallery-btn" onClick={nextClick}>
         <Image src={'/icons/next.svg'} width={100} height={100} alt="next button" />

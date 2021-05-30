@@ -18,7 +18,7 @@ const About: FC<IProps> = ({ content, image }) => {
           __html: content
         }}
       />
-      <img className="about-image" src={`${process.env.apiUrl}${image.url}`} alt={image.alternativeText} />
+      <img className="about-image" src={image.url} alt={image.alternativeText} />
     </section>
   )
 }
