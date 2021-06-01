@@ -1,3 +1,4 @@
+import CustomImage from '../../components/CustomImage'
 import { FC } from 'react'
 import axios from 'axios'
 import { useRouter } from 'next/router'
@@ -42,7 +43,7 @@ const Name: FC<IProps> = ({ item }) => {
     <section className="portfolio-section">
       <div className="viol-wrapper">
         <div className="viol-image">
-          <img src={image.url} alt="instrument image" />
+          <CustomImage src={image.url} alt="instrument image" />
         </div>
         <div className="viol-spec">
           <h2 className="viol-name">{name}</h2>

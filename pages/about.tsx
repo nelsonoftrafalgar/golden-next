@@ -1,3 +1,4 @@
+import CustomImage from '../components/CustomImage'
 import { FC } from 'react'
 import axios from 'axios'
 
@@ -18,7 +19,7 @@ const About: FC<IProps> = ({ content, image }) => {
           __html: content
         }}
       />
-      <img className="about-image" src={image.url} alt={image.alternativeText} />
+      <CustomImage className="about-image" src={image.url} alt={image.alternativeText} />
     </section>
   )
 }

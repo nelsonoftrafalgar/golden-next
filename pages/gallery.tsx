@@ -1,5 +1,6 @@
 import { IImage, useGallery } from '../utils/useGallery'
 
+import CustomImage from '../components/CustomImage'
 import { FC } from 'react'
 import Image from 'next/image'
 import axios from 'axios'
@@ -16,7 +17,7 @@ const Gallery: FC<IProps> = ({ images }) => {
         <Image src={'/icons/prev.svg'} width={100} height={100} alt="prev button" />
       </button>
       <div className="gallery-image">
-        <img src={currentImage.url} alt="gallery image" />
+        <CustomImage src={currentImage.url} alt="gallery image" />
       </div>
       <button className="gallery-btn" onClick={nextClick}>
         <Image src={'/icons/next.svg'} width={100} height={100} alt="next button" />
