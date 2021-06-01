@@ -1,5 +1,6 @@
 import { FC, useState } from 'react'
 
+import CustomImage from '../../components/CustomImage'
 import Link from 'next/link'
 import axios from 'axios'
 import { getInstrumentList } from '../../utils/getInstrumentList'
@@ -35,7 +36,7 @@ const Portfolio: FC<IProps> = ({ englishList, frenchList }) => {
           </ul>
         ) : (
           <div className="viols-menu-image">
-            <img src={'/icons/french-bg.svg'} alt="french menu image" />
+            <CustomImage src={'/icons/french-bg.svg'} alt="french menu image" />
           </div>
         )}
       </div>
@@ -55,7 +56,7 @@ const Portfolio: FC<IProps> = ({ englishList, frenchList }) => {
           </ul>
         ) : (
           <div className="viols-menu-image">
-            <img src={'/icons/english-bg.svg'} alt="english menu image" />
+            <CustomImage src={'/icons/english-bg.svg'} alt="english menu image" />
           </div>
         )}
       </div>
